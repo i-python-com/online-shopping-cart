@@ -1,5 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+.page-container {
+  width: 800px;
+  margin: 10px auto;
+  padding: 32px;
+  background-color: #fff;
+}
+
+.product-listing {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.product-listing .product-list-item {
+  padding: 10px 30px;
+  width: 200px;
 }

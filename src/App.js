@@ -18,7 +18,7 @@ const Navigation = props => (
 
 function App() {
   return (
-    <div>
+    <div className="page-container">
       <Navigation />
       <Router />
     </div>
