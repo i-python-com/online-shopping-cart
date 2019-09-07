@@ -1,4 +1,6 @@
 import React from 'react'
+import AddBtn from './add-btn'
+import RemoveBtn from './remove-btn'
 
 export default function ProductListItem(props) {
   return (
@@ -13,9 +15,18 @@ export default function ProductListItem(props) {
       <div>{props.product.description}</div>
       <div>${props.product.price}</div>
       <div>
-        <button onClick={() => props.addToCart(props.product)}>
-          Add to cart ({(props.cartItem && props.cartItem.quantity) || 0})
-        </button>
+        <AddBtn
+          cartItem={props.cartItem}
+          product={props.product}
+          addToCart={props.addToCart}
+        />
+        {props.cartItem ? (
+          <RemoveBtn
+            cartItem={props.cartItem}
+            product={props.product}
+            removeFromCart={props.removeFromCart}
+          />
+        ) : null}
       </div>
     </div>
   )
