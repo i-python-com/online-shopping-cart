@@ -4,7 +4,6 @@ import { connect } from 'react-redux'
 import Cart from '../cart'
 import CheckoutForm from './form'
 import fetchApi from '../../modules/fetch-api'
-import { isTSNumberKeyword } from '@babel/types'
 
 function submitOrder(values, cart) {
   const { email, name } = values.order
