@@ -7,9 +7,12 @@ import fetchApi from '../../modules/fetch-api'
 class ProductListing extends React.Component {
   componentDidMount() {
     const { loadProducts } = this.props
-    fetchApi('get', 'http://localhost:3001/products').then(json => {
-      loadProducts(json)
-    })
+    fetchApi('get', 'https://quiet-hamlet-87589.herokuapp.com/products').then(
+      json => {
+        console.log(json)
+        loadProducts(json)
+      }
+    )
   }
 
   render() {
@@ -19,6 +22,7 @@ class ProductListing extends React.Component {
       <div className="product-listing">
         {products.map(product => (
           <ProductListItem
+            key={product.id}
             product={product}
             addToCart={addToCart}
             removeFromCart={removeFromCart}

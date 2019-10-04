@@ -19,7 +19,7 @@ function Cart(props) {
 
       <tbody>
         {sort(props.cart).map(item => (
-          <tr>
+          <tr key={item.id}>
             <td>{item.name}</td>
             <td>{item.quantity}</td>
             <td>

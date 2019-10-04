@@ -4,16 +4,20 @@ import { connect } from 'react-redux'
 import Cart from '../cart'
 import CheckoutForm from './form'
 import fetchApi from '../../modules/fetch-api'
+import { isTSNumberKeyword } from '@babel/types'
 
 function submitOrder(values, cart) {
   const { email, name } = values.order
 
-  fetchApi('post', 'http://localhost:3001/orders', {
+  fetchApi('post', 'https://quiet-hamlet-87589.herokuapp.com/orders', {
     name,
     email,
-    order_items_attributes: cart.map(item => ({
-      product_id: item.id,
-      qty: item.quantity
+    order_items: cart.map(item => ({
+      name: item.name,
+      id: item.id,
+      qty: item.quantity,
+      image: item.image,
+      price: item.price
     }))
   }).then(json => {
     if (json.errors) {

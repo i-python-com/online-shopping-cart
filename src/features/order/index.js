@@ -8,18 +8,19 @@ class Order extends React.Component {
   }
 
   componentDidMount() {
-    fetchApi('get', `http://localhost:3001/orders/${this.props.id}`).then(
-      json => {
-        this.setState({
-          order: json
-        })
-      }
-    )
+    fetchApi(
+      'get',
+      `https://quiet-hamlet-87589.herokuapp.com/orders/${this.props.id}`
+    ).then(json => {
+      console.log(json)
+      this.setState({
+        order: json
+      })
+    })
   }
 
   renderOrder() {
     const { name, email, order_items } = this.state.order
-    console.log(this.state)
     return (
       <div>
         <h3>Order info</h3>
@@ -27,24 +28,24 @@ class Order extends React.Component {
         <div>Email: {email}</div>
 
         <h4>Items</h4>
-        <ul>
-          {order_items &&
-            order_items.map(item => {
-              const {
-                product,
-                qty,
-                product: { name, image, price }
-              } = item
-
-              return (
-                <li>
-                  <img src={image} width={32} alt="" />
-                  {name}({qty} @ ${price} = $
-                  {parseFloat(qty) * parseFloat(price)})
-                </li>
-              )
-            })}
-        </ul>
+        <table>
+          <thead>
+            <th>product</th>
+            <th>quantity</th>
+            <th>price</th>
+          </thead>
+          <tbody>
+            {order_items &&
+              order_items.map(item => (
+                <tr key={item.id}>
+                  <td>{item.name}</td>
+                  <td>{item.qty}</td>
+                  <td>{item.price}</td>
+                </tr>
+              ))}
+          </tbody>
+        </table>
+        <ul></ul>
       </div>
     )
   }
