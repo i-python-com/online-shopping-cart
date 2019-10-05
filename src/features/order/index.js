@@ -26,7 +26,7 @@ class Order extends React.Component {
         <h3>Order info</h3>
         <div>Name: {name}</div>
         <div>Email: {email}</div>
-
+        <hr />
         <h4>Items</h4>
         <table>
           <thead>
@@ -52,7 +52,9 @@ class Order extends React.Component {
 
   render() {
     const order = this.state.order
-    return <div>{order ? this.renderOrder() : 'Loading...'}</div>
+    return (
+      <div className="page-pd">{order ? this.renderOrder() : 'Loading...'}</div>
+    )
   }
 }
 

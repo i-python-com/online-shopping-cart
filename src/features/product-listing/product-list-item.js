@@ -4,16 +4,18 @@ import RemoveBtn from './remove-btn'
 
 export default function ProductListItem(props) {
   return (
-    <div className="product-list-item">
-      <h3>{props.product.name}</h3>
+    <div className="product-list-item m-2">
       <img
-        height={100}
+        className="mb-3"
+        height={200}
         title={props.product.name}
         src={`/products/${props.product.image}`}
         alt=""
       />
+      <h5>{props.product.name}</h5>
       <div>{props.product.description}</div>
-      <div>${props.product.price}</div>
+
+      <div className="badge badge-info m-2">${props.product.price}</div>
       <div>
         <AddBtn
           cartItem={props.cartItem}

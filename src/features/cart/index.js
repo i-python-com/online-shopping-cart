@@ -7,32 +7,34 @@ function sort(items) {
 
 function Cart(props) {
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Item</th>
-          <th>Quantity</th>
-          <th></th>
-          <th></th>
-        </tr>
-      </thead>
-
-      <tbody>
-        {sort(props.cart).map(item => (
-          <tr key={item.id}>
-            <td>{item.name}</td>
-            <td>{item.quantity}</td>
-            <td>
-              <button onClick={() => props.addToCart(item)}>+</button>
-              <button onClick={() => props.removeFromCart(item)}>-</button>
-              <button onClick={() => props.removeAllFromCart(item)}>
-                Remove All from cart
-              </button>
-            </td>
+    <div className="page-pd">
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th></th>
+            <th></th>
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+
+        <tbody>
+          {sort(props.cart).map(item => (
+            <tr key={item.id}>
+              <td>{item.name}</td>
+              <td>{item.quantity}</td>
+              <td>
+                <button onClick={() => props.addToCart(item)}>+</button>
+                <button onClick={() => props.removeFromCart(item)}>-</button>
+                <button onClick={() => props.removeAllFromCart(item)}>
+                  Remove All from cart
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   )
 }
 

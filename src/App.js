@@ -5,8 +5,8 @@ import { connect } from 'react-redux'
 import Router from './Router'
 
 const Navigation = ({ cart }) => (
-  <nav>
-    <ul className="top-menu">
+  <nav className="top-menu">
+    <ul>
       <li>
         <NavLink to="/">Home</NavLink>
       </li>

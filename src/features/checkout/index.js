@@ -31,9 +31,7 @@ function Checkout(props) {
   const { cart } = props
   return (
     <div>
-      <div style={{ border: '1px solid black' }}>
-        <Cart />
-      </div>
+      <Cart />
 
       <CheckoutForm onSubmit={values => submitOrder(values, cart)} />
     </div>
