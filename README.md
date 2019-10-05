@@ -2,7 +2,7 @@
 
 ### Homepage without add item to cart
 
-<img src="https://i.ibb.co/fMWhnsz/1-Homepage-without-add-item-to-cart.jpg" alt="1-Homepage-without-add-item-to-cart" border="0">
+<img src="https://i.ibb.co/wR30d82/1-Homepage-without-add-item-to-cart.jpg" alt="1-Homepage-without-add-item-to-cart" border="0">
 <br><br>
 
 ### Homepage add item to cart
