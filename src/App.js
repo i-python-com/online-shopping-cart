@@ -12,10 +12,10 @@ const Navigation = ({ cart }) => (
       </li>
       <li>
         <NavLink to="/cart">
-          Cart (
+          Cart ({' '}
           {cart.reduce((acc, item) => {
             return acc + item.quantity
-          }, 0)}
+          }, 0)}{' '}
           )
         </NavLink>
       </li>

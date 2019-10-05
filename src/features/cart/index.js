@@ -9,7 +9,7 @@ function Cart(props) {
   return (
     <div className="page-pd">
       <table className="table">
-        <thead className="thead-dark">
+        <thead className="thead-light">
           <tr>
             <th>Item</th>
             <th>Quantity</th>
