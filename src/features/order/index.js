@@ -12,7 +12,6 @@ class Order extends React.Component {
       'get',
       `https://quiet-hamlet-87589.herokuapp.com/orders/${this.props.id}`
     ).then(json => {
-      console.log(json)
       this.setState({
         order: json
       })
@@ -21,18 +20,24 @@ class Order extends React.Component {
 
   renderOrder() {
     const { name, email, order_items } = this.state.order
+    let totalPrice = order_items
+      .map(item => item.qty * item.price)
+      .reduce((a, b) => a + b)
+      .toFixed(2)
     return (
       <div>
         <h3>Order info</h3>
-        <div>Name: {name}</div>
-        <div>Email: {email}</div>
+        <div className="my-2">Name: {name}</div>
+        <div className="my-2">Email: {email}</div>
         <hr />
         <h4>Items</h4>
-        <table>
-          <thead>
-            <th>product</th>
-            <th>quantity</th>
-            <th>price</th>
+        <table className="table">
+          <thead className="thead-dark">
+            <tr>
+              <th>product</th>
+              <th>quantity</th>
+              <th>price</th>
+            </tr>
           </thead>
           <tbody>
             {order_items &&
@@ -40,9 +45,14 @@ class Order extends React.Component {
                 <tr key={item.id}>
                   <td>{item.name}</td>
                   <td>{item.qty}</td>
-                  <td>{item.price}</td>
+                  <td>{item.price * item.qty}</td>
                 </tr>
               ))}
+            <tr class="table-success">
+              <td>Total</td>
+              <td></td>
+              <td>{totalPrice}</td>
+            </tr>
           </tbody>
         </table>
         <ul></ul>

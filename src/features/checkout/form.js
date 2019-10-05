@@ -20,7 +20,9 @@ function CheckoutForm(props) {
         </div>
 
         <div>
-          <button type="submit">Submit order</button>
+          <button type="submit" className="btn btn-primary mt-3">
+            Submit order
+          </button>
         </div>
       </form>
     </div>

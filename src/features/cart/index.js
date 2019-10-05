@@ -8,8 +8,8 @@ function sort(items) {
 function Cart(props) {
   return (
     <div className="page-pd">
-      <table>
-        <thead>
+      <table className="table">
+        <thead className="thead-dark">
           <tr>
             <th>Item</th>
             <th>Quantity</th>
@@ -25,7 +25,12 @@ function Cart(props) {
               <td>{item.quantity}</td>
               <td>
                 <button onClick={() => props.addToCart(item)}>+</button>
-                <button onClick={() => props.removeFromCart(item)}>-</button>
+                <button
+                  onClick={() => props.removeFromCart(item)}
+                  className="mx-2"
+                >
+                  -
+                </button>
                 <button onClick={() => props.removeAllFromCart(item)}>
                   Remove All from cart
                 </button>
