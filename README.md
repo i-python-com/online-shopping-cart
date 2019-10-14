@@ -2,12 +2,12 @@
 
 ### Homepage without add item to cart
 
-<img src="https://i.ibb.co/wR30d82/1-Homepage-without-add-item-to-cart.jpg" alt="1-Homepage-without-add-item-to-cart" border="0">
+<img src="https://i.ibb.co/m556qJN/1-Homepage-without-add-item-to-cart.jpg" alt="1-Homepage-without-add-item-to-cart" border="0">
 <br><br>
 
 ### Homepage add item to cart
 
-<img src="https://i.ibb.co/7kD5kRW/2-Homepage-add-item-to-cart.jpg" alt="2-Homepage-add-item-to-cart" border="0">
+<img src="https://i.ibb.co/2s9V129/2-Homepage-add-item-to-cart.jpg" alt="2-Homepage-add-item-to-cart" border="0">
 <br><br>
 
 ### Cart page
