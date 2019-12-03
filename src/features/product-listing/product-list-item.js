@@ -15,7 +15,7 @@ export default function ProductListItem(props) {
       <h5>{props.product.name}</h5>
       <div>{props.product.description}</div>
 
-      <div className="badge badge-info m-2">${props.product.price}</div>
+      <div className="my-2">${props.product.price}</div>
       <div>
         <AddBtn
           cartItem={props.cartItem}

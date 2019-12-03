@@ -1,30 +1,3 @@
-# What does it look like?
-
-### Homepage without add item to cart
-
-<img src="https://i.ibb.co/m556qJN/1-Homepage-without-add-item-to-cart.jpg" alt="1-Homepage-without-add-item-to-cart" border="0">
-<br><br>
-
-### Homepage add item to cart
-
-<img src="https://i.ibb.co/2s9V129/2-Homepage-add-item-to-cart.jpg" alt="2-Homepage-add-item-to-cart" border="0">
-<br><br>
-
-### Cart page
-
-<img src="https://i.ibb.co/hR4n0xm/3-Cart-page.jpg" alt="3-Cart-page" border="0">
-<br><br>
-
-### Check out page
-
-<img src="https://i.ibb.co/wJCDs6s/4-Check-out-page.jpg" alt="4-Check-out-page" border="0">
-<br><br>
-
-### Orders page
-
-<img src="https://i.ibb.co/BtjppvZ/5-Orders-page.jpg" alt="5-Orders-page" border="0">
-<br><br>
-
 # Tech Stack
 
 1. React

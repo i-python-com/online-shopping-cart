@@ -32,7 +32,7 @@ function Cart(props) {
                   -
                 </button>
                 <button onClick={() => props.removeAllFromCart(item)}>
-                  Remove All from cart
+                  Remove All
                 </button>
               </td>
             </tr>

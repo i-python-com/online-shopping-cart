@@ -29,10 +29,12 @@ const Navigation = ({ cart }) => (
 class App extends React.Component {
   render() {
     return (
-      <div className="page-container">
+      <>
         <Navigation {...this.props} />
-        <Router />
-      </div>
+        <div className="container justify-content-center align-items-center">
+          <Router />
+        </div>
+      </>
     )
   }
 }
